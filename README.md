@@ -2,43 +2,49 @@
 
 Follow these steps to set up the project:
 
-1. **Set Up Environment Configuration**
+1. **Install dependencies**
+   - Use composer to install dependencies:
+     ```bash
+     composer i
+     ```
+
+2. **Set Up Environment Configuration**
    - Create a `.env` file by copying the example file:
      ```bash
      cp .env.example .env
      ```
 
-2. **Run Database Migrations**
+3. **Run Database Migrations**
    - Execute the migrations to set up the database schema:
      ```bash
      php artisan migrate
      ```
 
-3. **Seed the Database**
+4. **Seed the Database**
    - Populate the database with initial data:
      ```bash
      php artisan db:seed
      ```
 
-4. **Run Migrations for Testing Database**
+5. **Run Migrations for Testing Database**
    - Set up the testing database
      ```bash
      php artisan migrate --database=testing_mysql
      ```
 
-5. **Generate Passport Encryption Keys**
+6. **Generate Passport Encryption Keys**
    - Create the encryption keys for Laravel Passport:
      ```bash
      php artisan passport:keys
      ```
 
-6. **Run Tests**
+7. **Run Tests**
    - Verify the application is working as expected by running tests:
      ```bash
      php artisan test
      ```
 
-7. **Start the Development Server**
+8. **Start the Development Server**
    - Launch the local server (default: `http://localhost:8000`):
      ```bash
      php artisan serve
