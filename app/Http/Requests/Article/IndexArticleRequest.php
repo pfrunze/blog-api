@@ -14,7 +14,7 @@ class IndexArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category_id' => ['sometimes', 'integer', 'exists:categories,id'],
+            'filter.category_id' => ['sometimes', 'integer', 'exists:categories,id'],
             'filter.search' => ['sometimes', 'string'],
             'include' => ['sometimes', 'string'],
             'sort' => ['sometimes', 'string'],
